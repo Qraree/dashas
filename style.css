@@ -40,10 +40,25 @@ body {
 .foreign_stuff {
     height: 100vh;
     width: 100%;
-    background-color: pink;
+    background-color: #d8b4b4;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.stud_activity {
+    height: 100vh;
+    width: 100%;
+    background-color: #e0cfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stud_activity h1 {
+    color: black;
+    margin-bottom: 50px;
 }
 
 .foreign_photos {
@@ -51,20 +66,59 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
+    margin-right: 50px;
+}
+
+.stud_photos {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    width: 90%;
+    flex-direction: row;
 }
 
 .foreign_description {
-    width: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
 }
+
+.foreign_description h1 {
+    margin-bottom: 40px;
+    font-size: 42px;
+}
+
+.foreign_description p {
+    width: 350px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
 
 .foreign_photo {
     width: 250px;
     height: 250px;
 }
 
-.foreign_photo img {
+.stud_photo {
+    width: 300px;
+    height: 300px;
+}
+
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
+
+.second {
+    background-color: #9c8f9d
+}
+
+.second_desc {
+    width: 400px;
+    font-weight: normal;
+    font-size: 42px;
+}
+
