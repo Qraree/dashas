@@ -1,7 +1,22 @@
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('assets/font/TildaSans-VF.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 42px;
+}
 body {
     margin: 0;
     color: white;
-    font-family: Arial;
+    font-family: MyWebFont;
 }
 
 .main_container {
@@ -56,6 +71,37 @@ body {
     flex-direction: column;
 }
 
+.link_container button {
+    padding: 22px 60px;
+    background-color: transparent;
+    border: 3px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.link_container {
+    background-color: #d8b4b4;
+    height: auto;
+    padding: 60px 0
+}
+
+.buddy_container {
+    background-color: white;
+    height: auto;
+    padding: 50px 0;
+    padding-bottom: 90px;
+}
+
+.mentor {
+    background-color: #dcb2b2;
+    padding: 100px 0;
+}
+
+.sport_stuff h1 {
+    color: black;
+}
+
 .stud_activity h1 {
     color: black;
     margin-bottom: 50px;
@@ -76,6 +122,10 @@ body {
     align-items: center;
     width: 90%;
     flex-direction: row;
+}
+
+.buddy_photos {
+    width: 80%;
 }
 
 .foreign_description {
@@ -106,6 +156,11 @@ body {
     height: 300px;
 }
 
+.buddy_photo {
+    width: 350px;
+    height: 350px;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -121,4 +176,261 @@ img {
     font-weight: normal;
     font-size: 42px;
 }
+
+
+
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    width: 60vw;
+}
+
+.carousel_container {
+    /*padding-bottom: 100px;*/
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides1 img{
+    display: block;
+}
+
+.conference_header {
+    width: 70%;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+    width: 60vw;
+    max-width: 1200px;
+}
+
+.mySlides, .mySlides1 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.mySlides img, .mySlides1 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 2;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot-container {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    width: 100%;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slideshow-container {
+        width: 90vw;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+    }
+}
+
+.sport_stuff {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #e4cfcf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
+.sport {
+    display: grid;
+    grid-template-areas:
+        "first second"
+        "first third"
+        "forth fifth"
+        "forth sixth"
+        "seven eight"
+        "seven eight";
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 60%;
+}
+
+.sport > div {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+
+#first, #forth, #seven, #eight {
+    padding-bottom: 150%;
+}
+
+#second, #third, #fifth, #sixth {
+    padding-bottom: 75%;
+}
+
+
+.sport img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#first { grid-area: first; }
+#second { grid-area: second; }
+#third { grid-area: third; }
+#forth { grid-area: forth; }
+#fifth { grid-area: fifth; }
+#sixth { grid-area: sixth; }
+#seven { grid-area: seven; }
+#eight { grid-area: eight; }
+
+@media (max-width: 768px) {
+    .sport {
+        grid-template-areas:
+            "first"
+            "second"
+            "third"
+            "forth"
+            "fifth"
+            "sixth"
+            "seven"
+            "eight";
+        grid-template-columns: 1fr;
+    }
+}
+
 
